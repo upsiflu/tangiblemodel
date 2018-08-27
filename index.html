@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Flupsi's movement practices">
+ 	<meta name="keywords" content="Portfolio, Art, Ritual, Allegory, Cyborgism, Framing">
+  	<meta name="author" content="Flupsi Upsi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tangible model</title>
+	<style>
+html,body,div,span,
+h1,h2,h3,h4,h5,p,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{    margin:0;    padding:0;    border:0;    outline:0;    font-size:100%;    font:inherit;    vertical-align:baseline;    box-sizing: border-box;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{    display:block;
+}
+body{    line-height:1;}
+h1,h2,h3,h4,h5,h6{line-height:100%;}
+ol,ul{    list-style:none;}
+blockquote,q{    quotes:none;}
+blockquote:before,blockquote:after,
+q:before,q:after{    content:’’;    content:none;}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+*:focus{    border-left-color:rgb(240,255,40);}
+em {font-style:italic;}
+	</style>
+	<style>
+
+/* Portfolio-Standard */
+
+#welcome h1 {color:white;font-size:5rem; line-height:4rem;text-stroke:.02em white;-webkit-text-stroke:.02em white;}
+#welcome p {color:white;font-size:2rem; line-height:2rem;text-stroke:.02em white;-webkit-text-stroke:.02em white;}
+#welcome {position:fixed;}
+
+#contents {top:100vh; padding-top:5rem;background-color:rgba(0,0,0,0);position:absolute;padding-bottom:2em;width:100%;}
+/*
+#contents > .table-of-contents {transform:rotate(-90deg);background:transparent; font-style: italic;font-size:1.6em;
+padding-left:0;top:0vh;margin-top:-55vh; margin-bottom:6rem;
+line-height:4.4rem;max-width:35rem;}
+#contents > .table-of-contents > a {display:inline-block;background:#ccc; outline:.03rem solid black;padding:.0rem .8rem .2rem .8rem;margin-bottom:.5rem;
+border-width:.13rem !important;border-style: outset;text-decoration:none !important;font-style:normal;color:black;}
+#contents > .table-of-contents > a:hover {background:rgb(230,160,30);outline-width: .3rem;outline-style:double;}
+*/
+#contents > .table-of-contents {background:white;min-width: 100vw;}
+#contents > .table-of-contents a {font-size: 2.2em;margin-right:2em;
+    line-height: 1em; margin-bottom:1em;
+    display: inline-block;}
+#contents > .table-of-contents a small {display:inline-block; vertical-align: middle;font-size:0.8em; max-width:4.5em;line-height:1.0em;font-style:italic;margin:-.2rem; padding:.2em;text-align:center;}
+#contents > .table-of-contents a aside {display:block;color:black; text-decoration:none;vertical-align: middle;font-size:1rem; max-width:9em;line-height:1.0rem;font-style:italic;margin:-.2rem; padding:.2rem;margin-right:4rem;margin-left:-2rem;margin-bottom:-0.5rem;}
+#contents > .table-of-contents a:hover aside{background:transparent;}
+/* Standard */
+body {font-family: 'Cormorant Garamond', serif; line-height:1.2em;overflow-x:hidden;}
+*{transition: width .3s, height .8s, left .3s, right .3s, margin .3s, padding .3s, background-color 1s,border-left-color .2s, max-width .3s;}
+img {width:100%;}
+outlined {outline: .06em solid rgba(230,180,0,.9);outline-offset:.17em;}
+.s2 {width:50%;}
+.s3 {width:33.33%;}
+.s4 {width:25%;}
+.s23 {width:66.66%;}
+.s34 {width:75%;}
+.s16 {width:16.16%;}
+.s17 {width:14.28%;}
+.s27 {width:28.57%;}
+.s37 {width:43.85%;}
+.s47 {width:57.14%;}
+.s57 {width:71.42%;}
+.s19 {width:11.11%;}
+.s29 {width:22.22%;}
+.s49 {width:44.44%;}
+.s49 {width:55.55%;}
+.s79 {width:77.77%;}
+.s89 {width:88.88%;}
+.s112 {width:8.08%;}
+.p2 {width:12rem;}
+.p3 {width:8rem;}
+.p4 {width:6rem;}
+.p23 {width:16rem;}
+.p34 {width:18rem;}
+.p25 {width:9.6rem;}
+.p16 {width:4rem;}
+.p27 {width:6.8571rem;}
+.p37 {width:10.285rem;}
+.p49 {width:10.666rem;}
+.c {margin-left:2.7rem;}
+
+#contents {min-width:24rem;} 
+/*Abstand zwischen sections*/
+#contents>section {margin-top:1rem;}
+aside.navigational {margin-top: -1em;    padding-top: 1em;}
+article,.table-of-contents {max-width:30rem; background:white;display:block;padding-bottom:1.6rem;padding-top:1.6rem;}
+p,h1,h2,h3,h4,h5,.table-of-contents, details {padding:.3rem 2.4rem .5rem 2.7rem;border:.4rem solid rgba(0,0,0,0); border-left-width:.06rem;}
+/*Abstand zwischen p*/
+p + p {border-top-width: 0rem; padding-top: 0rem;} /*make multi paragraphs stay more together */
+h1 +img {border-top:.07rem solid black;margin-top:.2em;}
+h1 {font-size:3em;padding-bottom:.7rem; padding-top:.9rem; margin-left:-.2rem;letter-spacing:-0.12rem;}
+h2 {font-size:2.4em ;padding-bottom:.5rem; padding-top:.7rem;margin-left:-.15rem;letter-spacing:-0.09rem;}
+h3 {font-size:1.9em ;padding-bottom:.3rem;}
+h3:first-child {padding-top:0;margin-top:-.8rem;}
+h4, summary {font-size:1em; letter-spacing:.1em; padding-top:.5rem; padding-bottom:0rem; border-bottom-width:0rem;}
+h4+* {border-top-width:0rem;}
+
+em em, em em em em, aside em, aside aside {font-style:normal;}
+em, em em em, aside em em {font-style:italic;}
+
+.hide-sticky {background:white;z-index:2;width:2.2rem;height:2.2rem;display:block;margin-bottom:-2.2rem;position:absolute;box-shadow:0px 5px 5px white;}
+.sticky {  position: -webkit-sticky;  position: sticky; margin-left:0; display:block; top:0;right:0; margin-bottom:-2.2rem;}
+.sticky a {background:rgba(255,255,255,0.01);text-shadow:.5px  .5px 0px white, -.5px  -.5px 0px white, .5px -.5px 0px white,-.5px  .5px 0px white,.5px -.5px 0px white;height:2.2rem; width:2.2rem; overflow:hidden; letter-spacing:-.1em; font-size:1.8rem; line-height:2.2rem;display:block;text-align:center;text-decoration:none;}
+	</style>
+	<style>
+/* Flupsi */
+a {color: rgb(200,130,0);}
+::selection {background:rgba(230,200,0,.4);}
+details:hover, p>a:hover, aside>a:hover, nav>a:hover,a>aside:hover {background:rgba(230,200,0,.4);}
+article {outline: .4em solid rgba(255,255,255,.99)}
+#CV p em:first-child {text-indent:-1rem;display: inline-block; margin-right:.3rem;}
+aside{display:inline-block;padding:0rem 1.8rem .5rem .4rem; position:relative;top:-.6rem;left:3rem;margin-bottom:-.4rem;
+font-style:italic;width:19rem; margin-left:.7rem; border-left:.08em solid black;}
+aside p, aside h1, aside h2, aside h3, aside h4, aside details {padding-left:0rem;}
+
+/*embellishment*/
+.sticky+section{background:white; outline:.7rem solid white;min-width:100% !important;}/*to hide stickything*/
+aside+h1 {    margin-top: -1.3rem;}
+#contents.night>section {-webkit-filter: invert(100%);} /*night reading*/
+#contents.night>section img, #contents.night>section iframe  {-webkit-filter: invert(100%);}
+.work h2::before {content:"«";position:relative;display:inline-block;width:2em;text-align:right; margin-left:-2em;}
+.work h2::after {content:"»";position:relative;display:inline-block;margin-right:-2em;width:2em;}
+.work h2 {display:inline-block;}
+.overview {background:#ddd;margin-top:-1em;}
+.overview>*:first-child {font-size: 130%;line-height:1.2; font-style:italic;}
+#contents > section::before {border-top:.07rem dashed black !important;z-index:3;position:relative; top:0em;content:" "; width:100%;display:block;background:transparent;}
+.pdf::before {position:relative; top:0; left:-1rem; border:.03rem solid white;outline:.03rem solid #000; background:black; width:1.6rem; height:1.6rem; content:".pdf";display:block;line-height:1.6rem; margin-left:-1.6rem; margin-bottom:-1.5rem; color:white; font-size:1rem; letter-spacing:-.05rem; text-decoration:none !important;}
+#current {width:100%; background:rgb(30,0,50); color: yellow;max-width: 100%;    outline: .7rem solid white;z-index:14 !important;}
+#current aside {border-color:yellow !important;top:0.6rem;}
+	</style>
+	<style>
+/* 1-column layout (default) */
+img.marginal {object-fit:scale-down;border-radius:4.5rem;width:9rem; height:9rem;padding:.15rem .15rem .15rem .15rem;background:rgba(0,0,0,.02); border:.07rem solid rgb(200,130,0) !important; margin:.8rem -.2rem -.2rem 2.4rem;z-index:4;}
+
+	
+/* up to medium phone, portrait */
+@media only screen and (max-width: 30em) {
+	/*collapsible navigation bar -- initially show the toc*/
+	#contents {top:70vh !important;}
+	h1 {font-size:2.7em ;padding-bottom:.7rem; padding-top:.9rem; margin-left:-.2rem;letter-spacing:-0.10rem;}
+	h2 {font-size:2.1em ;padding-bottom:.5rem; padding-top:.7rem;margin-left:-.15rem;letter-spacing:-0.08rem;}
+	img.marginal {/*width:80vw !important; height:80vw !important;*/ border-radius:40vw !important; margin-left:10vw !important;}
+}
+
+/* 1-column layout with margin (small window) */
+@media only screen and (min-width: 30em) {
+	article {min-width:100%;}
+	 p{max-width:30em;}
+	img.illustrative {display:inline-block;max-width:50%; max-height:29rem;padding:.5rem .4rem .8rem .4rem;background:rgba(0,0,0,.01);}
+}
+
+@media only screen and (min-width: 40em) {
+	html {font-size:1.2em;}
+}
+/* 2-column layout (tablet, small portrait screens) */
+@media only screen and (min-width: 72em) {
+	p {padding:.6rem 2.4rem 1rem 2.4rem;border:.4rem solid transparent;}
+	h1 +img.illustrative {border:none;margin-top:0em;}
+	h1 +img.marginal {border:none;margin-top:0em;}
+	article {min-width:60em;width:60em;margin-left:auto;margin-right:auto;}
+	img.illustrative {display:inline-block;max-width:29rem; max-height:29rem;padding:.5rem .4rem .8rem .4rem;background:rgba(0,0,0,.01);}	
+	/*align 2 illustrative images*/
+	img.illustrative+img.illustrative {margin-left:16rem;}
+
+}
+@media only screen and (min-width: 84em) {
+	html {font-size:1.3em;}
+}
+
+/* 2.5-column layout (any large window) */
+@media only screen and (min-width: 99em) {
+	article > nav.table-of-contents {position: -webkit-sticky;  position: sticky; top:0;max-width:100% !important;z-index:5;background-color:rgb(222,222,222)!important;
+	border-width:.09rem;border-left-color:white;border-bottom-color:black;border-top-color:white;border-right-color:rgba(0,0,0,.2);outline:.03rem solid grey;box-shadow:inset 0 -.1rem 0 #888888;}
+	h1 +img.marginal {border:none;margin-top:0em;}
+	img.marginal:first-of-type {width:9rem; height:9rem;padding:.15rem .15rem .15rem .15rem;background:rgba(0,0,0,0); border:.05rem solid black !important; position:absolute;left:50%;margin-top:.8rem;margin-left:-38rem;;z-index:4;}
+}
+
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i" rel="stylesheet"><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>	
+	<section>
+		<article id="model" >
+			<p><img class="p2"src="tangiblemodel.jpg" alt="tangible model logo"/></p>
+			<p style="display:block; width:12rem; color:white; background:rgb(72,170,9);padding:.3rem;;margin-left:3rem;margin-top:-1.7em;text-align:center;"><em>accountable web apps</em></p>
+		</article>
+		<hr/>
+		<article id="diagram" >
+		<div style="width:100%; font-size: .4vw;position:relative; top:0px;">
+			<img style="position:relative; width:100em; alt="diagram" src="diagram.jpg">
+			<div style="position:absolute; left: 16em; top:27em; width: 15em;">
+				<p style=";font-size: 1rem;">accessible real-time web&nbsp;app
+			</div>
+			<div style="position:absolute; left: 67em; top:25em; width: 20em;">
+				<p style=";font-size: 1rem;">secure cloud&nbsp;database
+			</div>
+			<div style="position:absolute; left: 36em; top:70em; width: 18em;">
+				<p style=";font-size: 1rem;">accountability through transparent code&nbsp;contract
+			</div>
+		</div>
+		</article>
+		<div class="hide-sticky"></div>
+  		<nav class="sticky go-back"><a href="#main-menu" alt="main menu">&uarr;</a></nav>
+  	
+  		<article id="benefits">
+			<h1>benefits</h1>
+				<p>10 years of <em>error-free operation</em> guaranteed for every app</p>
+				<p>no unexpected behaviour</p>
+				<p>compliance with web and accessibility standards</p>
+				<p>100% tailored to your needs</p>
+				<p>scales with your business</p>
+		</article>
+	</section>
+	<script>
+		var reflowAll = function (tags){
+			var joinLastWords = function (p){
+					p.innerHTML = p.innerHTML.replace(/^\s+|\s+$/g, '');//remove trailing whitespace
+					p.innerHTML = p.innerHTML.replace(/ (?=[^ ]*$)/, '&nbsp;');//join last two words
+			}
+			var toReflow = [];
+			for (var t=0; t<tags.length; t++) {
+				var elements = document.getElementsByTagName(tags[t]);
+				for (var i=0; i<elements.length; i++) {
+					var e = elements[i];
+					toReflow.push(e); if(tags[t]=="p") toReflow.push(e); //paragraphs get double treatment
+				}
+			}
+			for (var t=0; t<toReflow.length; t++) {
+				var paragraph = toReflow.pop();
+				//console.log(paragraph);
+				joinLastWords (paragraph);
+			}
+		}
+		window.onload = function(){window.requestAnimationFrame(function() {reflowAll(["p","h1","h2","h3","h4","h5","aside"]);});};
+	</script>
+	
+
+</body>
+</html>
