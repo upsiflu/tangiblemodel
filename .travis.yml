@@ -1,8 +1,10 @@
 sudo: false
+
 cache:
   directories:
   - tests/elm-stuff/build-artifacts
   - sysconfcpus
+
 before_install:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - |
@@ -14,19 +16,27 @@ before_install:
     make && make install;
     cd ..;
   fi
-install:  - npm install -g firebase-tools - npm install -g elm@0.19.0-bugfix2 elm-test
-  elm-format - mv $(npm config get prefix)/bin/elm $(npm config get prefix)/bin/elm-old
-  - printf '%s\n\n' '#!/bin/bash' 'echo "Running elm with sysconfcpus -n 1"' '$TRAVIS_BUILD_DIR/sysconfcpus/bin/sysconfcpus
-  -n 1 elm-old "$@"' > $(npm config get prefix)/bin/elm - chmod +x $(npm config get
-  prefix)/bin/elm - cd tests - npm install - cd ..
+
+install:
+  - npm install -g firebase-tools
+  - npm install -g elm@0.19.0-bugfix2 elm-test elm-format
+  - mv $(npm config get prefix)/bin/elm $(npm config get prefix)/bin/elm-old
+  - printf '%s\n\n' '#!/bin/bash' 'echo "Running elm with sysconfcpus -n 1"' '$TRAVIS_BUILD_DIR/sysconfcpus/bin/sysconfcpus -n 1 elm-old "$@"' > $(npm config get prefix)/bin/elm
+  - chmod +x $(npm config get prefix)/bin/elm
+  - cd tests
+  - npm install
+  - cd ..
+
 script:
 - elm-format --validate .
 - elm-test
+
 deploy:
   provider: firebase
   token:
     secure: LQX1QVyjijMMmMPLNTCekr+r8giEi5QGOosHHm2JcTYlEK7qVzGNm5f1ZXyIWGEjLOBO7XoY7mby7nzTtKZeIN7L5lGwB/eUh6fkeypUNreZxoucQrww5Ued9N0/FRZEKqU4ApW9QP5X1zFgwyVaUF1aCkzqatKu80OxVyVE8KswUl0QjOfPtItrHZyznMgvjs1x7VNukpn5F3mcZ0yd6l0Io8X1GKyjAU4AJ/oWn6Q+5UxruIHNLSvPAefzdcQjy7uJdss50goSuCOt/+IHXrv2BvZ7V0BbC3IxDfkMSNCzrinXtzYgdS5Zb725tujEmaaX6NDFX0XDxTNDH1H3ldMFIwDzDskFnvWqhr9xLRuZQAdL0azM22QvCRDtOIdgeDMp+KV8WIldOT8Q+2bW3v9OgFEPgbenBkY2c04MWYLNhzgX3gZhTGGAtVEXC7wn7ouKOFXS344ZLjBzz6kRngrL+EQTGU5WuTB/fWaMQhqhihlRKbszi52U5BLzLXsbsf5Z7eykv+Oukacu+Tx9QFGAz2O59Ej3zlquA296/bdcGf2O1fcFWg/w0TiCU80iwWf+ZLXFzECE4wGunQDVwFpm1XI89FTqm3/veIm+RMGGOhIebhUjEFHcG1cKt/XUxmp/yThR/7mcK9LZDqifpDXpdPzJ9NbF4F1rvHEahHw=
   message: "deployment"
+
 env:
   global:
     secure: LQX1QVyjijMMmMPLNTCekr+r8giEi5QGOosHHm2JcTYlEK7qVzGNm5f1ZXyIWGEjLOBO7XoY7mby7nzTtKZeIN7L5lGwB/eUh6fkeypUNreZxoucQrww5Ued9N0/FRZEKqU4ApW9QP5X1zFgwyVaUF1aCkzqatKu80OxVyVE8KswUl0QjOfPtItrHZyznMgvjs1x7VNukpn5F3mcZ0yd6l0Io8X1GKyjAU4AJ/oWn6Q+5UxruIHNLSvPAefzdcQjy7uJdss50goSuCOt/+IHXrv2BvZ7V0BbC3IxDfkMSNCzrinXtzYgdS5Zb725tujEmaaX6NDFX0XDxTNDH1H3ldMFIwDzDskFnvWqhr9xLRuZQAdL0azM22QvCRDtOIdgeDMp+KV8WIldOT8Q+2bW3v9OgFEPgbenBkY2c04MWYLNhzgX3gZhTGGAtVEXC7wn7ouKOFXS344ZLjBzz6kRngrL+EQTGU5WuTB/fWaMQhqhihlRKbszi52U5BLzLXsbsf5Z7eykv+Oukacu+Tx9QFGAz2O59Ej3zlquA296/bdcGf2O1fcFWg/w0TiCU80iwWf+ZLXFzECE4wGunQDVwFpm1XI89FTqm3/veIm+RMGGOhIebhUjEFHcG1cKt/XUxmp/yThR/7mcK9LZDqifpDXpdPzJ9NbF4F1rvHEahHw=
