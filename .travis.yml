@@ -4,6 +4,7 @@ sudo: false
 cache:
   directories:
   - sysconfcpus
+  - test/elm-stuff/build-artifacts
 
 before_install:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
